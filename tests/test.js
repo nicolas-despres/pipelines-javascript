@@ -6,7 +6,7 @@ describe('String', function () {
             var myString = 'test';
             console.log(myString)
 
-            assert.equal(-1, myString.indexOf('t'));
+            assert.equal(-1, myString.indexOf('x'));
             assert.equal(-1, myString.indexOf('y'));
         });
     });
