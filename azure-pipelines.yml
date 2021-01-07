@@ -11,20 +11,13 @@ variables:
   value: initialValue 
   
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
+
   
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+- script: echo hello from Windows
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+- script: npx @ewam/installer
 
-- script: |
-    echo ${{ variables.myVar }} # outputs initialValue
-    echo $(myVar)
-  displayName: First variable pass
+- bash: echo "Using a var : $(myVar)"
+    
