@@ -3,16 +3,16 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+trigger:
+- main
+
 variables:
 - name: one
   value: initialValue 
   
-trigger:
-- main
-
 pool:
   vmImage: 'ubuntu-latest'
-
+  
 steps:
 - task: NodeTool@0
   inputs:
@@ -23,13 +23,8 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
 - script: |
     echo ${{ variables.one }} # outputs initialValue
     echo $(one)
   displayName: First variable pass
-- bash: echo '##vso[task.setvariable variable=one]secondValue'
-    displayName: Set new variable value
-- script: |
-    echo ${{ variables.one }} # outputs initialValue
-    echo $(one) # outputs secondValue
-  displayName: Second variable pass
