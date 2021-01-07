@@ -1,6 +1,6 @@
 # Sample NodeJS application for Azure Pipelines docs
 
-[![Build Status](https://dev.azure.com/NicolasDespres0463/tutorial/_apis/build/status/nicolas-despres.pipelines-javascript?branchName=master)](https://dev.azure.com/NicolasDespres0463/tutorial/_build/latest?definitionId=1&branchName=master)
+![Build Status](https://dev.azure.com/NicolasDespres0463/tutorial/_apis/build/status/nicolas-despres.pipelines-javascript?branchName=master)
 
 For information on how to set up a pipeline for this repository, see [Create your first pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azure-devops).
 For more information on building JavaScript or NodeJS applications, see [JavaScript](https://docs.microsoft.com/azure/devops/pipelines/languages/javascript).
