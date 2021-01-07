@@ -7,7 +7,7 @@ trigger:
 - main
 
 variables:
-- name: one
+- name: myVar
   value: initialValue 
   
 pool:
@@ -25,6 +25,6 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
-    echo ${{ variables.one }} # outputs initialValue
-    echo $(one)
+    echo ${{ variables.myVar }} # outputs initialValue
+    echo $(myVar)
   displayName: First variable pass
