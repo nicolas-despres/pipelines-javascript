@@ -6,18 +6,12 @@
 trigger:
 - main
 
-variables:
-- name: myVar
-  value: initialValue 
-  
 pool:
   vmImage: 'windows-latest'
 
   
 steps:
 - script: echo hello from Windows
-
-- script: npx @ewam/installer
 
 - bash: |
     echo "Using a var : $(myVar)"
